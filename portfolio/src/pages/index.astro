@@ -1,15 +1,84 @@
 ---
-import Home from '../layouts/Home.astro';
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
+import Home from "../layouts/Home.astro";
+import Header from "../components/Header/Header";
+import Hero from "../components/Home/Hero/Hero";
+import Cards from "../components/Cards/Cards";
+import Footer from "../components/Footer/Footer";
+import Slider from "../components/Slider/Slider";
 
-import "../styles/global.css"
+import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const marcasEjemplo = [
+  {
+    id: 1,
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
+    url: "https://samsung.com",
+    name: "Samsung"
+  },
+  {
+    id: 2,
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    url: "https://apple.com",
+    name: "Apple"
+  },
+  {
+    id: 3,
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    url: "https://google.com",
+    name: "Google"
+  },
+  {
+    id: 4,
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+    url: "https://netflix.com",
+    name: "Netflix"
+  },
+  {
+    id: 5,
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    url: "https://amazon.com",
+    name: "Amazon"
+  },
+  {
+    id: 6,
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
+    url: "https://samsung.com",
+    name: "Samsung"
+  },
+  {
+    id: 7,
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    url: "https://apple.com",
+    name: "Apple"
+  },
+  {
+    id: 8,
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    url: "https://google.com",
+    name: "Google"
+  },
+  {
+    id: 9,
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+    url: "https://netflix.com",
+    name: "Netflix"
+  },
+  {
+    id: 10,
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    url: "https://amazon.com",
+    name: "Amazon"
+  }
+];
 ---
 
 <Home>
-	<Header title='Header home' />
-	<Footer title='Footer home' />
+  <Header title="Header home" />
+  <Hero title="Hero Home" />
+  <Cards title="Cards Home" />
+  <Slider brands={marcasEjemplo} />
+  <Footer title="Footer home" />
 </Home>
