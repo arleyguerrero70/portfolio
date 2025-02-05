@@ -11,22 +11,25 @@ const Hero: React.FC<HeroProps> = ({ title }) => {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
           <div>
             <div className="max-w-lg md:max-w-none">
-              <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <h2 className="text-3xl font-semibold text-secondary-arlo sm:text-4xl">
+                ¡Hola! Soy Arley Guerrero
               </h2>
-
-              <p className="mt-4 text-gray-700">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                doloremque saepe architecto maiores repudiandae amet perferendis
-                repellendus, reprehenderit voluptas sequi.
+              <h1 className="text-2xl font-semibold text-secondary-arlo sm:text-3xl">
+                Desarrollador Frontend en VTEX & Shopify
+              </h1>
+              <p className="mt-4 text-m text-primary-white sm:text-base">
+                Tengo más de <b>3 años de experiencia</b> en la creación y evolución de ecommerce.
+                <br />
+                Mi enfoque es desarrollar interfaces optimizadas y escalables
+                para mejorar la conversión, el rendimiento y la experiencia de usuario.
               </p>
             </div>
           </div>
 
-          <div>
+          <div className="flex justify-center items-center">
             <img
-              src="https://images.unsplash.com/photo-1731690415686-e68f78e2b5bd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              className="rounded"
+              src="src/assets/Home/arley_guerrero_hero.jpg"
+              className="rounded-[50%] grayscale hover:grayscale-0 transition-all duration-300"
               alt=""
             />
           </div>

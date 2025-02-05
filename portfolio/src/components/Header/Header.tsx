@@ -42,16 +42,6 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                   href="#"
                 >
                   {" "}
-                  Documentación{" "}
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="text-primary-white transition hover:text-primary-arlo"
-                  href="#"
-                >
-                  {" "}
                   Proyectos{" "}
                 </a>
               </li>
