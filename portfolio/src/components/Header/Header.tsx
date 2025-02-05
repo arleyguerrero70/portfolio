@@ -6,10 +6,11 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
   return (
-    <header className="bg-secondary-black border-[1px] border-b-primary-white">
+    <header className="bg-secondary-black border-b-[1px] border-b-primary-arlo">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <a className="block text-teal-600" href="#">
           <span className="sr-only text-primary-white">Home</span>
+
           <svg
             className="h-8"
             viewBox="0 0 28 24"
