@@ -17,10 +17,11 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
             <span className="sr-only text-primary-white">Home</span>
 
             <img
-              src="src/assets/arlo-logo.png"
+              src="/assets/arlo-logo.png"
               alt="Logo"
               className="w-10 h-10"
             />
+
           </a>
 
           <div className="flex flex-1 items-center justify-end md:justify-between">
@@ -80,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                   >
                     <span className="sr-only">Platzi</span>
                     <img
-                      src="src/assets/header/platzi.png"
+                      src="/assets/header/platzi.png"
                       alt="Platzi"
                       className="w-[25px] h-[25px] grayscale brightness-0 invert"
                     />
@@ -182,7 +183,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
           <div className="absolute left-1/2 -translate-x-1/2 -top-13">
             <a href="#" className="block bg-primary-arlo p-3 rounded-full border-2 border-primary-white">
               <img
-                src="src/assets/arlo-logo.png"
+                src="/assets/arlo-logo.png"
                 alt="Logo"
                 className="w-10 h-10"
               />
