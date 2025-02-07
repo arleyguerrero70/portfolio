@@ -12,7 +12,7 @@ const Cards: React.FC<CardsProps> = ({ title }) => {
           He participado en estas implementaciones
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 m-2 md:m-0">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 m-2 md:m-0 md:px-2 lg:px-0">
         <article className="relative overflow-hidden rounded-lg shadow-sm grayscale hover:grayscale-0 transition-all duration-300">
           <img
             alt=""
