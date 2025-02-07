@@ -1,3 +1,8 @@
+---
+import SpeedInsights from '@vercel/speed-insights/astro';
+const { title, description } = Astro.props;
+---
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -7,9 +12,12 @@
     <meta name="generator" content={Astro.generator} />
     <meta name="title" content="Frontend Developer en VTEX & Shopify">
     <meta name="description" content="Desarrollador frontend especializado en VTEX y Shopify. Diseño y optimizo tiendas online con componentes de alto rendimiento y conversión.">
-    <title>Arlo</title>
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
   </head>
   <body class="container m-auto">
+    <SpeedInsights />
     <slot />
   </body>
 </html>
