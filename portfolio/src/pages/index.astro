@@ -3,74 +3,43 @@ import Home from "../layouts/Home.astro";
 import Header from "../components/Header/Header";
 import Hero from "../components/Home/Hero/Hero";
 import Cards from "../components/Cards/Cards";
-import Footer from "../components/Footer/Footer";
 import Slider from "../components/Slider/Slider";
+import InformationPage from "../components/InformationPages/InformationPage";
+import Footer from "../components/Footer/Footer";
+
 
 import "../styles/global.css";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-
-const marcasEjemplo = [
+const sliderBrandsImages = [
   {
     id: 1,
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
-    url: "https://samsung.com",
-    name: "Samsung"
+    image: "/src/assets/sliderBrands/logo-Sony.png",
+    url: "https://store.sony.com.co/",
+    name: "Sony"
   },
   {
     id: 2,
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-    url: "https://apple.com",
-    name: "Apple"
+    image: "src/assets/sliderBrands/new-estuardo.png",
+    url: "https://www.estuardosanchez.com/",
+    name: "Estuardo Sanchez"
   },
   {
     id: 3,
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-    url: "https://google.com",
-    name: "Google"
+    image: "/src/assets/sliderBrands/farma-express.webp",
+    url: "https://www.farmaexpress.com/",
+    name: "Farma express"
   },
   {
     id: 4,
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
-    url: "https://netflix.com",
-    name: "Netflix"
+    image: "src/assets/sliderBrands/inkanta.png",
+    url: "https://www.inkanta.com.co/",
+    name: "Inkanta"
   },
   {
     id: 5,
-    image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    url: "https://amazon.com",
-    name: "Amazon"
-  },
-  {
-    id: 6,
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
-    url: "https://samsung.com",
-    name: "Samsung"
-  },
-  {
-    id: 7,
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-    url: "https://apple.com",
-    name: "Apple"
-  },
-  {
-    id: 8,
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-    url: "https://google.com",
-    name: "Google"
-  },
-  {
-    id: 9,
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
-    url: "https://netflix.com",
-    name: "Netflix"
-  },
-  {
-    id: 10,
-    image: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    url: "https://amazon.com",
-    name: "Amazon"
+    image: "src/assets/sliderBrands/calypso.jpg",
+    url: "https://www.tiendascalypso.com/",
+    name: "Calypso"
   }
 ];
 ---
@@ -79,6 +48,7 @@ const marcasEjemplo = [
   <Header title="Header home" />
   <Hero title="Hero Home" />
   <Cards title="Cards Home" />
-  <Slider brands={marcasEjemplo} />
+  <Slider brands={sliderBrandsImages} />
+  <InformationPage title="Information Home"/>
   <Footer title="Footer home" />
 </Home>
