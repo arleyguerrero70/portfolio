@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ title }) => {
 
           <div className="flex justify-center items-center">
             <img
-              src="src/assets/Home/arley_guerrero_hero.jpg"
+              src="/assets/Home/arley_guerrero_hero.jpg"
               className="rounded-[50%] grayscale hover:grayscale-0 transition-all duration-300"
               alt=""
             />
