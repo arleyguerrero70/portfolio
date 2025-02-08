@@ -14,7 +14,11 @@ const Slider: React.FC<BrandSliderProps> = ({ brands, autoPlayInterval = 2000 })
   const [isPaused, setIsPaused] = useState(false);
 
   return (
-    <div className="slider-wrapper">
+    <>
+    <div>
+      <h3 className='text-3xl font-semibold text-primary-arlo text-center my-6 px-2 sm:text-4xl'>También he participado en la evolución de estas marcas</h3>
+    </div>
+    <div className="slider-wrapper ">
       <div className="slider-container">
         <div 
           className={`slider-track ${isPaused ? 'paused' : ''}`}
@@ -35,6 +39,7 @@ const Slider: React.FC<BrandSliderProps> = ({ brands, autoPlayInterval = 2000 })
         </div>
       </div>
     </div>
+    </>
   );
 };
 
