@@ -179,7 +179,7 @@ Ejemplo: "Saber qué acciones se pueden realizar en una ruta específica" (te in
 
 
 <details>
-  <summary>Parametros en el body</summary>
+  <summary>Parámetros en el body</summary>
   El body tendrá la información que vamos a consultar, enviar, o actualizar. Son las acciones que podemos hacer durante el partido.
   Veamos como se agrega en el código:
 
@@ -218,6 +218,66 @@ fetch(url, {
 }).then(response => response.json()).then(data => console.log(data))
 
   ```
+</details>
+
+
+<details>
+  <summary>Políticas CORS</summary>
+
+  ### Qué es CORS
+  Su significado es Cross Origin Resourse Sharing (Intercambio de Recursos de Origen Cruzado)
+
+  Imagina que tu navegador es un jugador que quiere entrar al vestuario (servidor) para jugar (hacer una petición). Pero en la entrada del vestuario hay un persona de seguridad (el servidor) que verifica si el jugador tiene permiso para entrar.
+  Si el jugador es del mismo equipo (misma URL/dominio), no hay problema, entra sin restricciones.
+  Si el jugador viene de otro equipo (otro dominio diferente), el personal de seguridad le pide que muestre un permiso especial (las reglas CORS).
+  Si el personal de seguridad no reconoce al jugador como seguro, lo expulsa (bloquea la petición).
+
+  #### Técnicaente esto significa:
+  Se dice que es un origen distinto cuándo:
+  - La petición viene de un subdomino distinto, por ejemplo el dominio es santafe.com, si tiene una petición de inferiores.santafe.com esto es un subdominio distinto.
+  - La petición viene de un dominio distinto.
+  - La peitición viene de un puerto distinto, por ejemplo si en mi ambiente local estoy trabajando en el puerto 3000 y recibo una petición de un número diferente.
+  - La petición viene de un protocolo distinto, por ejemplo uno utiliza HTTPS y el otro HTTP
+
+
+  ### Peticiones simples
+
+  https://developer.mozilla.org/es/docs/Web/HTTP/CORS
+
+  Es como un jugador visitante que llega a un estadio y el personal de seguridad lo deja pasar sin muchas preguntas porque ya lo conoce y sabe que no es peligroso.
+
+  En términos técnicos, una petición es simple si cumple con estas reglas:
+  ✅ Usa métodos básicos como GET, POST o HEAD.
+  ✅ Los encabezados son estándar (Content-Type debe ser application/x-www-form-urlencoded, multipart/form-data o text/plain).
+  ✅ No usa credenciales como Authorization o cookies.
+
+  Si la petición cumple estas condiciones, el servidor la deja pasar sin problema.
+
+  ### Peticiones prefligth
+
+  Ahora imagina que un equipo visitante quiere entrar al estadio con reglas diferentes, como traer su propia pelota o jugar con más de 11 jugadores. Antes de permitirlo, el personal de seguridad primero consulta con el dueño del estadio para ver si está permitido.
+
+  Esto es lo que hace el preflight:
+
+  Antes de la petición real, el navegador envía una petición OPTIONS al servidor para preguntar:
+  🏟️ "¿Puedo hacer esta petición con estos métodos, encabezados y credenciales?"
+  Si el servidor responde con un CORS permitido, el navegador envía la petición real.
+  Si no, el navegador la bloquea.
+  El preflight ocurre cuando:
+  ❌ Se usan métodos distintos a GET, POST o HEAD (como PUT, DELETE, PATCH).
+  ❌ Se envían encabezados personalizados (Authorization, X-Custom-Header, etc.).
+  ❌ Se incluyen credenciales (cookies, tokens de autenticación).
+
+  Básicamente, las peticiones simples pasan directo, pero las más complejas necesitan un "permiso" previo antes de ejecutarse.
+
+  ### Estas peticiones usan CORS 
+  - Peticiones AJAX
+  - Web Fonts
+  - Texturas WebGL (interfaz de programación de aplicaciones gráficas ( API ) creada para su uso en aplicaciones web.)
+  - Imágenes con videos usando Canvas
+  - CSS Shapes con imágenes (Es una herramienta que permite definir formas geométricas para usar en CSS, y que se pueden aplicar a imágenes)
+
+
 </details>
 
 
