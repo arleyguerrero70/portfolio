@@ -3,11 +3,10 @@ import Home from "../layouts/Home.astro";
 import Header from "../components/Header/Header";
 import Hero from "../components/Home/Hero/Hero";
 import Cards from "../components/Cards/Cards";
-import Slider from "../components/Slider/Slider";
 import InformationPage from "../components/InformationPages/InformationPage";
 import Footer from "../components/Footer/Footer";
 
-
+import MasonryGrid from "../components/Layout/MasonryGrid";
 import "../styles/global.css";
 
 const sliderBrandsImages = [
@@ -15,32 +14,43 @@ const sliderBrandsImages = [
     id: 1,
     image: "/assets/sliderBrands/logo-Sony.png",
     url: "https://store.sony.com.co/",
-    name: "Sony"
+    name: "Sony",
   },
   {
     id: 2,
     image: "/assets/sliderBrands/new-estuardo.png",
     url: "https://www.estuardosanchez.com/",
-    name: "Estuardo Sanchez"
+    name: "Estuardo Sanchez",
   },
   {
     id: 3,
     image: "/assets/sliderBrands/farma-express.webp",
     url: "https://www.farmaexpress.com/",
-    name: "Farma express"
+    name: "Farma express",
   },
   {
     id: 4,
     image: "/assets/sliderBrands/inkanta.png",
     url: "https://www.inkanta.com.co/",
-    name: "Inkanta"
+    name: "Inkanta",
   },
   {
     id: 5,
     image: "/assets/sliderBrands/calypso.jpg",
     url: "https://www.tiendascalypso.com/",
-    name: "Calypso"
-  }
+    name: "Calypso",
+  },
+];
+
+let dummyImages = [
+  "/assets/Brands/estuardo_desk.png",
+  "/assets/Brands/estilos_mobile.png",
+  "/assets/Brands/inkanta_mobile.png",
+  "/assets/Brands/tnf_desk.png",
+  "/assets/Brands/calypso_desk.png",
+  "/assets/Brands/sony_mobile.png",
+  "/assets/Brands/vans_mobile.png",
+  "/assets/Brands/farma_desk.png"
 ];
 ---
 
@@ -48,7 +58,7 @@ const sliderBrandsImages = [
   <Header title="Header home" />
   <Hero title="Hero Home" />
   <Cards title="Cards Home" />
-  <Slider brands={sliderBrandsImages} />
-  <InformationPage title="Information Home"/>
+  <InformationPage title="Information Home" />
+  <MasonryGrid images={dummyImages} />
   <Footer title="Footer home" />
 </Home>
