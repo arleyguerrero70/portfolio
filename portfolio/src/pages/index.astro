@@ -42,23 +42,43 @@ const sliderBrandsImages = [
   },
 ];
 
-let dummyImages = [
-  "/assets/Brands/estuardo_desk.png",
-  "/assets/Brands/estilos_mobile.png",
-  "/assets/Brands/inkanta_mobile.png",
-  "/assets/Brands/tnf_desk.png",
-  "/assets/Brands/calypso_desk.png",
-  "/assets/Brands/sony_mobile.png",
-  "/assets/Brands/vans_mobile.png",
-  "/assets/Brands/farma_desk.png"
+let imagesMansory = [
+  { image: "/assets/Brands/estuardo_desk.png", url: "https://www.estuardosanchez.com/" },
+  { image: "/assets/Brands/estilos_mobile.png", url: "https://www.estilos.com/" },
+  { image: "/assets/Brands/inkanta_mobile.png", url: "https://www.inkanta.com.co/" },
+  { image: "/assets/Brands/tnf_desk.png", url: "https://www.thenorthface.com.co/" },
+  { image: "/assets/Brands/calypso_desk.png", url: "https://www.tiendascalypso.com/" },
+  { image: "/assets/Brands/sony_mobile.png", url: "https://store.sony.com.co/" },
+  { image: "/assets/Brands/vans_mobile.png", url: "https://www.vans.com.co/" },
+  { image: "/assets/Brands/farma_desk.png", url: "https://www.farmaexpress.com/" },
 ];
+
+// Rellenar con arlo-logo si no es múltiplo de 4
+const maxColumns = 4;
+const remainder = imagesMansory.length % maxColumns;
+if (remainder !== 0) {
+  const toAdd = maxColumns - remainder;
+  for (let i = 0; i < toAdd; i++) {
+    imagesMansory.push({ image: "/assets/arlo-logo.png", url: "" });
+  }
+}
 ---
 
 <Home>
   <Header title="Header home" />
   <Hero title="Hero Home" />
+  <div>
+    <h2 class="text-3xl font-semibold text-primary-arlo text-center mt-15 mb-6 px-2 sm:text-4xl">
+      Mis implementaciones
+    </h2>
+  </div>
   <Cards title="Cards Home" />
+  <div>
+    <h2 class="text-3xl font-semibold text-primary-arlo text-center mt-15 mb-6 px-2 sm:text-4xl">
+      Mis participaciones
+    </h2>
+  </div>
+  <MasonryGrid images={imagesMansory} />
   <InformationPage title="Information Home" />
-  <MasonryGrid images={dummyImages} />
   <Footer title="Footer home" />
 </Home>
