@@ -7,11 +7,6 @@ interface CardsProps {
 const Cards: React.FC<CardsProps> = ({ title }) => {
   return (
     <>
-      <div>
-        <h2 className="text-3xl font-semibold text-primary-arlo text-center my-6 px-2 sm:text-4xl">
-          He participado en estas implementaciones
-        </h2>
-      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 m-2 md:m-0 md:px-2 lg:px-0">
         <article className="relative overflow-hidden rounded-lg shadow-sm grayscale hover:grayscale-0 transition-all duration-300">
           <img
